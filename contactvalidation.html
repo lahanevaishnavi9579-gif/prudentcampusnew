@@ -1,0 +1,46 @@
+<html>
+<head>
+<title></title>
+
+<script type="text/javascript">
+
+
+
+function validContact(str)
+{
+let flag =false;
+for(var i=0;i<str.length;i++)
+{
+if(!(str.charCodeAt(i)>=65 && str.charCodeAt(i)<=90 && str.charCodeAt(i)>=95 && str.charCodeAt(i)<=122))
+{
+flag=true;
+break;
+}
+}
+
+if(flag)
+{
+document.getElementById("s").innerHTML="valid contact";
+document.getElementById("s").style.color="green";
+
+}
+
+else{
+document.getElementById("s").innerHTML="invalid contact";
+
+}
+}
+</script>
+
+</head>
+<body>
+
+<input type="text" id="t" placeholder="enter contact" />
+<button onclick="validContact(document.getElementById('t').value)">Check</button>
+
+<h2 id="s"></h2>
+
+
+</body>
+
+</html>
